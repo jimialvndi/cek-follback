@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Follow Checker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
+        <h1 class="text-3xl font-bold text-center text-gray-700">Cek Siapa yang Belum Follback Kamu!</h1>
+        <h1 class="text-1xl font-bold text-center text-gray-600 mb-6">by <a class="text-1xl font-bold underline text-blue-600" href="https://www.instagram.com/jimialvndi_">@jimialvndi_</a></h1>
+        <form id="upload-form" class="space-y-4">
+            <div>
+                <label for="followersFile" class="block text-sm font-medium text-gray-700 mb-2">Upload Followers JSON File:</label>
+                <input type="file" id="followersFile" accept=".json" class="block w-full border border-gray-300 rounded-lg p-2">
+            </div>
+            <div>
+                <label for="followingFile" class="block text-sm font-medium text-gray-700 mb-2">Upload Following JSON File:</label>
+                <input type="file" id="followingFile" accept=".json" class="block w-full border border-gray-300 rounded-lg p-2">
+            </div>
+            <button type="button" id="checkBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+                Check
+            </button>
+        </form>
+        <div id="results" class="mt-6">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Akun yang Kamu Follow tapi tidak Follback:</h2>
+            <div class="mb-4">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search username..." 
+                    class="w-full border border-gray-300 rounded-lg p-2"
+                >
+            </div>
+            <div class="overflow-x-auto">
+                <table id="not-following-back" class="table-auto w-full text-left border-collapse border border-gray-300">
+                    <thead class="bg-blue-500 text-white">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2">No.</th>
+                            <th class="border border-gray-300 px-4 py-2">Username</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
