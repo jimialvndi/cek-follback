@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Follow Checker</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
         <h1 class="text-3xl font-bold text-center text-gray-700">Cek Siapa yang Belum Follback Kamu!</h1>
-        <h1 class="text-1xl font-bold text-center text-gray-600 mb-6">by <a class="text-1xl font-bold underline text-blue-600" href="https://www.instagram.com/jimialvndi_">@jimialvndi_</a></h1>
+        <h1 class="text-1xl font-bold text-center text-gray-600 mb-6">by <a class="text-1xl font-bold underline text-blue-600" href="https://www.instagram.com/jimialvndi_" target="_blank">@jimialvndi_</a></h1>
+        <a class="text-1xl font-bold underline text-blue-600" href="https://www.tiktok.com/@jimialvndii_/video/7453801966288915719?is_from_webapp=1&sender_device=pc&web_id=7298410693535352321" target="_blank">Tonton Cara Penggunaannya disini</a>
+    <br/><br/>
         <form id="upload-form" class="space-y-4">
             <div>
                 <label for="followersFile" class="block text-sm font-medium text-gray-700 mb-2">Upload Followers JSON File:</label>
@@ -46,6 +49,15 @@
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+
+    <!-- Popup Modal -->
+    <div id="followPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-96">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Follow Akun Saya Terlebih Dahulu</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mb-4">Pasti akan di Follback, anggap saja nambah-nambah teman yah;v</h4>
+            <a id="followLink" href="https://www.instagram.com/jimialvndi_/" target="_blank" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mb-4">Follow @jimialvndi_</a>
+            <button id="confirmFollowBtn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg">Sudah Follow</button>
+        </div>
+    </div>
 </body>
 </html>
